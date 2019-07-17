@@ -23,11 +23,38 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.demoSelector{
+  margin-top: 10px;
 }
+
+.demo-title{
+  border-bottom: 1px solid black;
+}
+.demo-container{
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  width: 40%;
+  margin: 10px auto 0 auto;
+  padding: 15px 0;
+  border: 1px solid #4b4b4b;
+  border-radius: 6px;
+}
+
+
+.outputFields{
+  display: flex;
+  flex-direction: row;
+  margin: auto auto;
+}
+.outputFieldsKey{
+  color: #5a2b2a;
+  padding: 8px;
+}
+.outputFieldsValue{
+  padding: 8px;
+}
+
+/*.projectID{*/
+  /*display: flex;*/
+  /*flex-direction: row;*/
+/*}*/

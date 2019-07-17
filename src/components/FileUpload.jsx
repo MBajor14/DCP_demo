@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const FileUpload = () => {
     const [file, setFile] = useState('');
     const [projectID, setprojectID] = useState('');
+    const [uploaded, setUploaded] = useState(false);
 
 
     const handleFileChange = event => {
@@ -26,7 +27,10 @@ const FileUpload = () => {
                 body: formData
             })
                 .then(res => res.json())
-                .then(data => console.log('Success:', JSON.stringify(data)))
+                .then(data => {
+                    console.log('Success:', JSON.stringify(data))
+                    setUploaded(true);
+                })
                 .catch(error => console.error('Error:', error))
 
         }
@@ -41,10 +45,14 @@ const FileUpload = () => {
 
 
     return (
-        <form className="demo-component" onSubmit={onSubmit}>
+        <form className="demo-container" onSubmit={onSubmit}>
+            <h3 className="demo-title">File Upload Demo</h3>
             <input type="text" name="projectID" onChange={handleTextChange}/>
             <input type="file" name="file" onChange={handleFileChange}/>
             <button>Upload</button>
+            {
+                uploaded && <h4>Uploaded</h4>
+            }
         </form>
     );
 };
