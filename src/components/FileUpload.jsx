@@ -28,7 +28,7 @@ const FileUpload = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log('Success:', JSON.stringify(data))
+                    console.log('Result:', JSON.stringify(data));
                     setUploaded(true);
                 })
                 .catch(error => console.error('Error:', error))
