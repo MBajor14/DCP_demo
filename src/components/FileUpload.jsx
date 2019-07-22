@@ -23,7 +23,7 @@ const FileUpload = () => {
         event.preventDefault();
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('projectID', projectID);
+        // formData.append('projectID', projectID);
         formData.append('projectName', projectName);
         formData.append('entityName', 'dcp_project');
 
@@ -54,8 +54,8 @@ const FileUpload = () => {
     return (
         <form className="demo-container" onSubmit={onSubmit}>
             <h3 className="demo-title">File Upload Demo</h3>
-            <input type="text" name="projectID" onChange={handleProjectIDChange} placeholder="Project ID..."/>
-            <input type="text" name="projectName" onChange={handleProjectNameChange} placeholder="Project Name..."/>
+            {/*<input type="text" name="projectID" onChange={handleProjectIDChange} placeholder="Project ID..."/>*/}
+            <input type="text" name="projectName" onChange={handleProjectNameChange} placeholder="Project ID..."/>
             <input type="file" name="file" onChange={handleFileChange} />
             <button>Upload</button>
             {
